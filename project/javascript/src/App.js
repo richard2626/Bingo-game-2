@@ -10,7 +10,7 @@ import Game from "./pages/Games"
 import Home from "./pages/Home"
 import { useEffect, useState } from "react";
 
-import { w3cwebsocket as W3CWebSocket } from "websocket"
+import { w3cwebsocket as W3CWebSocket, w3cwebsocket } from "websocket"
 import { v4 as uuidv4 } from "uuid"
 import Nav from "./components/nav"
 
@@ -18,8 +18,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { updateName, updateUUID, updateBingoList, updateBingoSelected, updateMessages, updateMyTurn, updateOnlineMember, updateNumberPicked, updatePoint,updateGameMode } from "./redux/actions"
 import { store } from "./redux/store";
 
-const client = new W3CWebSocket("ws://192.168.51.220:8080")
-// const client = new W3CWebSocket("ws://127.0.0.1:8080")
+// const client = new W3CWebSocket("ws://192.168.51.220:8080")
+const client = new W3CWebSocket("ws://127.0.0.1:8080")
 
 
  function App() {

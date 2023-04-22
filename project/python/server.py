@@ -217,8 +217,8 @@ async def sending_message(message, ws, key):
         del USERS[key]
 
 
-# start_server = websockets.serve(chat, "127.0.0.1", PORT)
-start_server = websockets.serve(chat, "192.168.51.220", PORT)
+start_server = websockets.serve(chat, "127.0.0.1", PORT)
+# start_server = websockets.serve(chat, "192.168.51.220", PORT)
 
 asyncio.get_event_loop().run_until_complete(start_server)
 asyncio.get_event_loop().run_forever()
